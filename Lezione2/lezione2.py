@@ -28,4 +28,14 @@ name_upper: str = name.upper()
 # print(f"{name}, {name.upper()}, {name.lower()}")
 print(f'{name}, {name_upper}, {name_lower}')
 
+# 2-5. Famous Quote: Find a quote from a famous person you admire. Print the quote and the name of its author. 
+# Your output should look something like the following, including the quotation marks: Albert Einstein once said, 
+# “A person who never made a mistake never tried anything new.”
+
+name: str = 'Scherlock Holmes'
+
+cit: str = 'una volta disse,"Elementare Watson"'
+
+print(f'{name}, {cit}')
+
 
