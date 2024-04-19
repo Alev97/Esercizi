@@ -42,3 +42,21 @@ def print_numbers(x: list):
 
 lista: list = [3, 4, 5, 6]
 print_numbers(lista)
+
+# Esercizio 5
+
+def check_each(x: list):
+    for i in x:
+        if i > 5:
+            print(f'{i} è maggiore di 5')
+        elif i < 5:
+            print(f'{i} è minore di 5')
+        else:
+            print(f'{i} è uguale a 5')
+     
+x: list = [7, 5, 3]
+check_each(x)
+
+
+
+
