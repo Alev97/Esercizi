@@ -33,3 +33,12 @@ def check_lenght(x: str):
         print(f'{x} è uguale a 10 caratteri')
 
 check_lenght('mammamia')
+
+# Esercizio 4
+
+def print_numbers(x: list):
+    for i in x:
+        print(i)
+
+lista: list = [3, 4, 5, 6]
+print_numbers(lista)
