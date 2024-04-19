@@ -21,3 +21,15 @@ def check_value(x: int):
         print(f'{x} è uguale a 5')
 
 check_value(22)
+
+# Esercizio 3
+
+def check_lenght(x: str):
+    if len(x) > 10:
+        print(f'{x} è più lunga di 10 caratteri')
+    elif len(x) < 10:
+        print(f'{x} è più corta di 10 caratteri')
+    else:
+        print(f'{x} è uguale a 10 caratteri')
+
+check_lenght('mammamia')
