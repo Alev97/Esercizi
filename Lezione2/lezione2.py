@@ -79,4 +79,16 @@ for name in guest_list:
 # • Modify your list, replacing the name of the guest who can’t make it with the name of the new person you are inviting.
 # • Print a second set of invitation messages, one for each person who is still in your list.
 
+print(f'{guest_list[0]} non può venire a cena')
+print(f'{guest_list[3]} non può venire a cena')
+guest_list.pop(0)
+guest_list.insert(0, 'Maria')
+guest_list.pop(3)
+guest_list.insert(3, 'Franceca')
+for name in guest_list:
+    print(f'Hi {name}, do you want come...')
+
+# 
+
+
 
