@@ -113,6 +113,50 @@ for name in guest_list:
 """
 
 print(f'Hi {guest_list}, I have a sit for only two people')
+while len(guest_list)>2:
+    name = guest_list.pop()
+    print(f'Sorry {name}, you cant came')
+
+print(f'{guest_list[0]} and {guest_list[1]}, you are still invited.')
+del guest_list[-2:]
+
+print(guest_list)
+
+"""
+3-8. Seeing the World: Think of at least five places in the world you’d like to visit.
+• Store the locations in a list. Make sure the list is not in alphabetical order.
+• Print your list in its original order. Don’t worry about printing the list neatly; just print it as a raw Python list.
+• Use sorted() to print your list in alphabetical order without modifying the actual list.
+• Show that your list is still in its original order by printing it.
+• Use sorted() to print your list in reverse-alphabetical order without changing the order of the original list.
+• Show that your list is still in its original order by printing it again.
+• Use reverse()  to change the order of your list. Print the list to show that its order has changed.
+• Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+• Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+• Use sort() to change your list so it’s stored in reverse-alphabetical order.
+Print the list to show that its order has changed.
+"""
+# Egitto, Giappone, Norvegia, New York, Las Vegas
+
+my_places: list = ['Egitto', 'Giappone', 'Norvegia', 'New York', 'Las Vegas']
+print(sorted(my_places))
+print(sorted(my_places, reverse = True))
+my_places.reverse()
+print(my_places)
+my_places.reverse()
+print(my_places)
+my_places.sort()
+print(my_places)
+my_places.sort(reverse = True)
+print(my_places)
+
+"""
+3-9. Dinner Guests: Working with one of the programs from Exercises 3, 
+use len() to print a message indicating the number of people you’re inviting to dinner.
+"""
+for name in guest_list:
+    print(f'Hi {name}, do you want to come to dinner with me tonight?')
+
 
 
 
