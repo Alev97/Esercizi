@@ -154,8 +154,15 @@ print(my_places)
 3-9. Dinner Guests: Working with one of the programs from Exercises 3, 
 use len() to print a message indicating the number of people you’re inviting to dinner.
 """
-for name in guest_list:
-    print(f'Hi {name}, do you want to come to dinner with me tonight?')
+guest_list: list = ['Franco', 'Ugo', 'Chiara', 'Pluto']
+print(f'i am inviting {len(guest_list)} people to dinner')
+
+"""
+3-10. Every Function: Think of things you could store in a list. 
+For example, you could make a list of mountains, rivers, countries, cities, languages, 
+or anything else you’d like. Write a program that creates a list 
+containing these items and then uses each function introduced in this chapter at least once.
+"""
 
 
 
