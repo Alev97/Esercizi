@@ -47,12 +47,11 @@ for numbers in range(1,21):
 and then use a for loop to print the numbers.
  (If the output is taking too long, stop it by pressing CTRL-C or by closing the output window.)
 """
-"""
+
 numbers = list(range(1,1000001))
 for number in numbers:
-    print(number)          FACCIO COSI PERCHE' NON MI STAMPA LE ALTRE COSE
+    print(number)         
 
-"""
 
 """
 4-5. Summing a Million: Make a list of the numbers from one to one million,
@@ -138,3 +137,76 @@ for pizza in my_favpizza:
     print(f'My favourite pizza are: {pizza}')
 for pizza in friend_pizza:
     print(f"My friend's pizza are: {pizza}")
+
+"""
+4-12. More Loops: All versions of foods.py in this section have avoided using for loops when printing,
+ to save space. Choose a version of foods.py, and write two for loops to print each list of foods.
+"""
+
+# NON HO CAPITO
+
+"""
+4-15. Code Review: Choose three of the programs you’ve written in this chapter
+ and modify each one to comply with PEP 8.
+"""
+# CONTINUO A NON CAPIRE
+
+"""
+5-1. Conditional Tests: Write a series of conditional tests. Print a statement
+describing each test and your prediction for the results of each test. Your code
+should look something like this:
+car = 'subaru'
+print("Is car == 'subaru'? I predict True.")
+print(car == 'subaru')
+print("\nIs car == 'audi'? I predict False.")
+print(car == 'audi')
+• Look closely at your results, and make sure you understand why each line
+evaluates to True or False.
+• Create at least 10 tests. Have at least 5 tests evaluate to True and another
+5 tests evaluate to False.
+"""
+
+pet = 'cat'
+print("\nIs pet == 'cat'? I predict True")
+print(pet == 'cat')
+print("\nIs pet == 'dog'? I predict False")
+print(pet == 'dog')
+
+anime = 'dragon ball'
+print("\nIs anime == 'dragon ball'? I predict True")
+print(anime == 'dragon ball')
+print("\nIs anime == 'johnny bravo'? I predict False")
+print(anime == 'johnny bravo')
+
+pizza = 'margherita'
+print("\nIs pizza == 'margherita'? I predict True")
+print(pizza == 'margherita')
+print("\nIs pizza == 'ortolana'? I predict False")
+print(pizza == 'ortolana')
+
+pasta = 'carbonara'
+print("\nIs pasta == 'carbonara'? I predict True")
+print(pasta == 'carbonara')
+print("\nIs pasta == 'aglio...'? I predict False")
+print(pasta == 'aglio...')
+
+sport = 'sci'
+print("\nIs sport == 'sci'? I predict True")
+print(sport == 'sci')
+print("\nIs sport == 'volleyball'? I predict False")
+print(sport == 'volleyball')
+
+"""
+5-3. Alien Colors #1: Imagine an alien was just shot down in a game.
+ Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
+• Write an if statement to test whether the alien’s color is green. 
+If it is, print a message that the player just earned 5 points.
+• Write one version of this program that passes the if test and another that fails.
+ (The version that fails will have no output.)
+"""
+
+alien_color = 'red'
+if alien_color == 'red':
+    print('You earned 5 points')
+if alien_color == 'green':
+    print('You earned 5 points')
