@@ -99,3 +99,10 @@ cubenums = list(range(1,11))
 for nums in cubenums:
     cube = nums ** 3
     print(cube)
+
+"""
+4-9. Cube Comprehension: Use a list comprehension to generate a list of the first 10 cubes.
+"""
+
+cube = [nums ** 3 for nums in range(1,11)]
+print(cube)
