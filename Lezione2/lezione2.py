@@ -256,9 +256,21 @@ for pet in pets:
     print(f"Type pet:{pet['type_pet']}")
     print(f"Owner:{pet['owner']}")
 
+"""
+6-9. Favorite Places: Make a dictionary called favorite_places.
+ Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. 
+ To make this exercise a bit more interesting, ask some friends to name a few of their favorite places.
+   Loop through the dictionary, and print each person’s name and their favorite places.
+"""
 
-  
+favorite_places = {'Alex':['Giappone','Egitto','Norvegia'],
+                   'Lucia':['Messico','Canada','Arizona'],
+                   'Susanna':['USA','Brasile']}
 
+for name,places in favorite_places.items():
+    formatted_places = ', '.join(places) # così converto in una stringa
+    print(f'{name} vorrebbe andare in {formatted_places}')
+    
 
 
 
