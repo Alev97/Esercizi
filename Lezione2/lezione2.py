@@ -284,7 +284,29 @@ people_favnums = {'Donatella':['7','35','97'],
 for name,nums in people_favnums.items():
     formatted_favnums = ', '.join(nums)
     print(f'{name}:{formatted_favnums}')
-    
 
+"""
+6-11. Cities: Make a dictionary called cities. Use the names of three cities as keys in your dictionary.
+    Create a dictionary of information about each city and include the country that the city is in,
+    its approximate population, and one fact about that city. 
+    The keys for each city’s dictionary should be something like country, population, and fact.
+    Print the name of each city and all of the information you have stored about it.    
+"""
 
+cities = {'Roma': {'country': 'Italia',
+        'population': '2.755.309',
+        'fact': 'Caput mundi.'},
+        
+        'Miami': {'country': 'Florida',
+        'population': '470.914',
+        'fact': 'Miami is known as “Magic City".'},
+        
+        'Praga': {'country': 'Repubblica Cieca',
+        'population': '1.291.552',
+        'fact': 'Prague is home to the largest castle in the world.'}}
 
+for city, info in cities.items():
+    print(f"City: {city}")
+    print(f"Country: {info['country']}")
+    print(f"Population: {info['population']}")
+    print(f"Fact: {info['fact']}")
