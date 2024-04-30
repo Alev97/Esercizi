@@ -202,8 +202,8 @@ Print each person’s name and their favorite number.
 """
 
 people_favnums = {'Donatella':'7','Bern':'5','Ale':'3','Claudio':'9','Dario':'15'}
-for key,value in people_favnums.items():
-    print(f'{key}:{value}')
+for name,nums in people_favnums.items():
+    print(f'{name}:{nums}')
 
 """
 6-3. Glossary: A Python dictionary can be used to model an actual dictionary.
@@ -270,10 +270,21 @@ favorite_places = {'Alex':['Giappone','Egitto','Norvegia'],
 for name,places in favorite_places.items():
     formatted_places = ', '.join(places) # così converto in una stringa
     print(f'{name} vorrebbe andare in {formatted_places}')
+
+"""
+6-10. Favorite Numbers: Modify your program from Exercise 6-2 so each person 
+can have more than one favorite number. Then print each person’s name along with their favorite numbers.    
+"""
+
+people_favnums = {'Donatella':['7','35','97'],
+                  'Bern':['5','23','9'],
+                  'Ale':['3','22','73'],
+                  'Claudio':['9','41','1'],
+                  'Dario':['15','6','27']}
+for name,nums in people_favnums.items():
+    formatted_favnums = ', '.join(nums)
+    print(f'{name}:{formatted_favnums}')
     
-
-
-
 
 
 
