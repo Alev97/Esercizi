@@ -205,7 +205,23 @@ people_favnums = {'Donatella':'7','Bern':'5','Ale':'3','Claudio':'9','Dario':'15
 for key,value in people_favnums.items():
     print(f'{key}:{value}')
 
-
+"""
+6-3. Glossary: A Python dictionary can be used to model an actual dictionary.
+ However, to avoid confusion, let’s call it a glossary.
+• Think of five programming words you’ve learned about in the previous chapters.
+ Use these words as the keys in your glossary, and store their meanings as values.
+• Print each word and its meaning as neatly formatted output.
+ You might print the word followed by a colon and then its meaning, 
+ or print the word on one line and then print its meaning indented on a second line.
+Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
+"""
+glossary = {'Variables':'Variables are containers for storing data values.',
+            'Dictionaries':'Dictionaries are used to store data values in key:value pairs. A dictionary is a collection which is ordered, changeable and do not allow duplicates.',
+            'Tuple':'A tuple is a collection which is ordered and unchangeable.',
+            'Functions':'A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function.A function can return data as a result.',
+            'Set':'A set is a collection which is unordered, unchangeable, and unindexed.'}
+for word,meaning in glossary.items():
+    print(f'{word}:\n {meaning}\n')
 
 
 
