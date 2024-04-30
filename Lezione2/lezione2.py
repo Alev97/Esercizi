@@ -163,6 +163,53 @@ For example, you could make a list of mountains, rivers, countries, cities, lang
 or anything else you’d like. Write a program that creates a list 
 containing these items and then uses each function introduced in this chapter at least once.
 """
+my_list: list = ['Everest','Po','Spain','roma','english','carbonara','Plafoniera']
+print(f"la luinghezza della lista arriva a {len(my_list)}")
+my_list.pop(0)
+my_list.insert(0, 'Sinai')
+my_list.append('Ugo')
+print(f"applico pop insert e append {my_list}")
+print(f"riordino la lista {sorted(my_list)}")
+print(f"rigiro la lista  {sorted(my_list, reverse = True)}")
+my_list.reverse()
+print(f'rigiro la lista originale{(my_list)}')
+my_list.sort()
+print(my_list)
+my_list.sort(reverse = True)
+del my_list[7]
+for i in range(len(my_list)):
+    my_list[i] = my_list[i].upper()
+    my_list[i] = my_list[i].lower()
+    my_list[i] = my_list[i].capitalize()
+
+"""
+6-1. Person: Use a dictionary to store information about a person you know. 
+Store their first name, last name, age, and the city in which they live.
+ You should have keys such as first_name, last_name, age, and city. 
+ Print each piece of information stored in your dictionary.
+"""
+
+person = {'nome':'Ugo','cognome':'Fantozzi','età': 50,'città':'Roma'}
+for key,value in person.items():
+    print(f'{key}:{value}')
+
+"""
+6-2. Favorite Numbers: Use a dictionary to store people’s favorite numbers. 
+Think of five names, and use them as keys in your dictionary. 
+Think of a favorite number for each person, and store each as a value in your dictionary. 
+Print each person’s name and their favorite number.
+ For even more fun, poll a few friends and get some actual data for your program.
+"""
+
+people_favnums = {'Donatella':'7','Bern':'5','Ale':'3','Claudio':'9','Dario':'15'}
+for key,value in people_favnums.items():
+    print(f'{key}:{value}')
+
+
+
+
+
+
 
 
 
