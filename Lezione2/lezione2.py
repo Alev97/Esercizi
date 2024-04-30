@@ -223,8 +223,41 @@ glossary = {'Variables':'Variables are containers for storing data values.',
 for word,meaning in glossary.items():
     print(f'{word}:\n {meaning}\n')
 
+"""
+6-7. People: Start with the program you wrote for Exercise 6-1.
+ Make two new dictionaries representing different people, and store all three dictionaries in a list
+   called people. Loop through your list of people. As you loop through the list, 
+   print everything you know about each person.
+"""
 
 
+
+
+# NON CAPITO CHE DEVO FARE
+
+
+
+
+
+"""
+6-8. Pets: Make several dictionaries, where each dictionary represents a different pet.
+ In each dictionary, include the kind of animal and the owner’s name. 
+ Store these dictionaries in a list called pets. Next, loop through your list and as
+you do, print everything you know about each pet. 
+"""
+pet1 = {'type_pet':'cat','name_pet':'Crystal','owner':'Alex'}
+pet2 = {'type_pet':'dog','name_pet':'Nana','owner':'Monica'}
+pet3 = {'type_pet':'turtle','name_pet':'Ruga','owner':'Claudio'}
+
+pets = [pet1,pet2,pet3]
+
+for pet in pets:
+    print(f"Name pet:{pet['name_pet']}")
+    print(f"Type pet:{pet['type_pet']}")
+    print(f"Owner:{pet['owner']}")
+
+
+  
 
 
 
