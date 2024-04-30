@@ -60,7 +60,7 @@ for number in numbers:
  Also, use the sum() function to see how quickly Python can add a million numbers.
 """
 
-numbers = list(range(1,100))
+numbers = list(range(1,1000001))
 for number in numbers:
     minnums = min(numbers)
     maxnums = max(numbers)
