@@ -94,4 +94,18 @@ def make_shirt(size,message):
 make_shirt('M',"Don't worry, be happy")
 make_shirt(size = 'XXL', message = 'Carpe diem')
 
+'''
+8-4. Large Shirts: Modify the make_shirt() function so that shirts are large by default with a message 
+that reads I love Python. Make a large shirt and a medium shirt with the default message, 
+and a shirt of any size with a different message.
+'''
+
+def make_shirt(size, message):
+    print(f"The size of the shirt is {size} and the message to be printed is: '{message}'.")
+make_shirt('L','I love Python')
+make_shirt(size = 'M', message = 'I love Python')
+make_shirt(size = 'XS', message = 'I love Carbonara')
+
+
+
 
