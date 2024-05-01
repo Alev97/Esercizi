@@ -1,4 +1,7 @@
 
+# GLI ESERCIZI VERI INIZIANO DALLA LINEA 65
+
+'''
 # Esercizio 1
 
 def subtract (x: float, y: float):
@@ -56,7 +59,15 @@ def check_each(x: list):
      
 x: list = [7, 5, 3]
 check_each(x)
+'''
+#############################################
 
-
-
+'''
+8-1. Message: Write a function called display_message() 
+that prints one sentence telling everyone what you are learning about in this chapter. 
+Call the function, and make sure the message displays correctly.
+'''
+def display_massage():
+    print('In this chapter I am learning how to solve a problem and how to use functions in Python')
+display_massage()
 
