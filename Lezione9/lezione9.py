@@ -200,3 +200,167 @@ def sudoku(tavola: list[list[int]]) -> bool:
 # square_i = 2, square_j = 1 -> 7
 # square_i = 2, square_j = 2 -> 8 ---> 3 * square_i + square_j
                
+
+'''
+
+Data una lista di interi, chiamata tree, che rappresenta un albero binario, restituire True se l'albero è simmetrico; False altrimenti.
+
+La lista di interi è formata così:
+
+    L'elemento in posizione 0 corrisponde alla radice
+    Dato un nodo in posizione i, il suo figlio sinistro si trova in posizione 2*i + 1
+    Dato un nodo in posizione i, il suo figlio destro si trova in posizione 2*(i+1)
+    Se, dato un indice i si va fuori bound facendo almeno uno dei calcoli dei punti precedenti, significa che il nodo che corrisponde a quell'indice è una foglia.
+
+
+'''
+
+# METODO 1 SENZA CLASSE
+
+# [1,2,3,4,5,6]
+# elemento in pos. 0 (1) -> radice
+# per elem in pos. i -> il figlio a sx si trova in pos. 2*i +1
+# per elem in pos. 1 -> il figlio a dx si trova in pos. 2*(i+1) = 2*i + 2
+#              1
+#            /   \
+#           2     2
+#          / \   / \
+#         4   5 4   5
+
+
+def is_symmetric(tree: list[int]) -> bool:
+    return are_mirrored(tree, 1, 2)
+
+def are_mirrored(tree, left_index, right_index) -> bool:
+    if left_index >= len(tree) and right_index >= len(tree):
+        return True
+    elif left_index >= len(tree) and right_index < len(tree) or (left_index < len(tree) and right_index >= len(tree)):
+        return False
+    if tree[left_index] != tree[right_index]:
+        return False
+    
+    left_of_left = 2 * left_index + 1
+    right_of_left = 2 * left_index + 2
+
+    left_of_right = 2 * right_index + 1
+    right_of_right = 2 * right_index + 2
+
+    is_symmetric_external: bool = are_mirrored(tree, left_of_left, right_of_right)
+    is_symmetric_internal: bool = are_mirrored(tree, right_of_left, left_of_right)
+
+    return is_symmetric_internal and is_symmetric_external
+
+
+
+# METODO 2 SENZA CLASSE (DI LUCA)
+
+
+def is_symmetric_luca(tree: list[list]) -> bool:
+    tree_dict: dict[str, list[int]] = {}
+    tree_dict['0-a'] = [tree[1]]
+    tree_dict['0-b'] = [tree[2]]
+
+    for i in range(len(tree) // 2):
+        if 2 * (i + 1) < len(tree):
+            tree_dict[f'{i}-a'] = [tree[2*i+1], tree[2*(i+1)]]
+            tree_dict[f'{i}-b'] = [tree[2*(i+1)+1], tree[2*((i+1)+1)]]
+    
+    for i in range(len(tree_dict) // 2):
+
+        if tree_dict[f'{i}-a'] != list(reversed(tree_dict[f'{i}-b'])):
+            return False
+        
+    return True
+
+
+# METODO CON LA CLASSE
+
+
+class TreeNode:
+    
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+tree = TreeNode(val=1, left=TreeNode(val=2), right=TreeNode(val=2))
+        
+def is_symmetric_with_class(root: TreeNode) -> bool:
+
+    def are_mirrored(left: TreeNode, right:TreeNode) -> bool:
+        if not left and not right:
+            return True
+        if not left and not right:
+            return False
+        
+        if left.val != right.val:
+            return False
+        
+        is_symmetric_external: bool = are_mirrored(left.left, right.right)
+        is_symmetric_internal: bool = are_mirrored(right.left, left.right)
+
+        return is_symmetric_internal and is_symmetric_external
+    
+    return are_mirrored(root.left, root.right)
+
+def build_tree(tree: list[int]) -> TreeNode:
+    # tree = [1,2,3,None,4,None,5]
+    nodes = []
+    for val in tree:
+        if val:
+            nodes.append(TreeNode(val))
+        else:
+            nodes.append(None)
+    # figlio a sx sta in 2*i+1
+    # figlio a dx sta in 2*i+2
+    for i in range(len(nodes) // 2):
+        if nodes[i]:
+            left_index = 2*i + 1
+            right_index = 2*i + 2
+            if left_index < len(nodes):
+                nodes[i].left = nodes[left_index]
+            if right_index < len(nodes):
+                nodes[i].right = nodes[right_index]
+
+    return nodes[0]
+
+#def is_symmetric_vl:
+    
+
+
+
+'''
+
+Scrivi una funzione che ruota gli elementi di una lista verso sinistra di un numero specificato k di posizioni.
+La rotazione verso sinistra significa che ciascun elemento della lista viene spostato a sinistra di una posizione e 
+l'elemento iniziale viene spostato alla fine della lista. Per la rotazione utilizzare lo slicing e 
+gestire il caso in cui il numero specificato di posizioni sia maggiore della lunghezza della lista.
+
+'''
+
+def rotate_left(elements: list, k: int) -> list:
+    
+    k = k % len[elements]
+
+    while k > 0:
+        first_elem = lista[0]  
+        lista = lista[1:] + [first_elem]  
+        k -= 1
+    
+    return lista
+
+lista = [1,2,3,4,5,6,7,8,9]
+k = 5
+lista_ruotata_sx = rotate_left(lista, k)
+print(lista_ruotata_sx)
+
+
+
+
+
+
+
+
+   
+    
