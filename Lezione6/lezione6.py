@@ -179,3 +179,11 @@ print(professore_1.ore_di_lezione)
 
 print(str())
 
+
+
+
+
+
+    
+
+

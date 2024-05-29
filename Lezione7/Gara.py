@@ -75,7 +75,7 @@ while True:
     elif tartaruga >= 70:
         print("TORTOISE WINS! || VAY!!!")
     else:
-        lepre >= 70:
+        lepre >= 70
         print("HARE WINS || YUCH!!!")
 
     
