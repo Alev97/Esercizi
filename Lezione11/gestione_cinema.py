@@ -28,7 +28,7 @@ class Sala:
         self.num_posti: int = num_posti
 
         if self.num_posti < self.posti_tot:
-            self.posti_prenotati += 1
+            self.posti_prenotati += num_posti
             return 'Confermato'
         else:
             return 'Errore'
