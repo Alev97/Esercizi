@@ -32,9 +32,9 @@ class Sala:
 
 
 
-def posti_disponibili(self):
+    def posti_disponibili(self):
 
-    return self.posti_tot - self.posti_prenotati
+        return self.posti_tot - self.posti_prenotati
 
 
 
