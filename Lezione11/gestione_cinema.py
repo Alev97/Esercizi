@@ -10,17 +10,14 @@ class Film:
 
 
 
-
-
 class Sala:
- 
-    def __init__(self, num_ident: int, film: str, posti_tot: int, posti_prenotati: int):
+
+    def __init__(self, num_ident: int, posti_tot: int, posti_prenotati: int, film_adesso: Film = None):
         self.num_ident: int = num_ident
-        self.film: str = film
+        self.film_adesso: Film = film_adesso
         self.posti_tot: int = posti_tot
         self.posti_prenotati: int = posti_prenotati
-        self.sala = None
-
+        self.sale = None
 
 
 
@@ -32,28 +29,26 @@ class Sala:
             return 'Confermato'
         else:
             return 'Errore'
-          
 
 
-    def posti_disponibili(self):
 
-        return self.posti_tot - self.posti_prenotati
+def posti_disponibili(self):
 
-
+    return self.posti_tot - self.posti_prenotati
 
 
 
 class Cinema:
 
 
-    def __init__(self, sala: Sala):
+    def __init__(self, sale: list[Sala] = []):
 
-        self.sala: list[Sala] = []
-
+        self.sale: list[Sala] = sale
 
 
     def aggiungi_sala(self, sala: Sala):
-        self.sala: Sala = sala
+
+        self.sale.append(sala)
 
 
 
@@ -62,9 +57,15 @@ class Cinema:
         self.num_posti: int = num_posti
 
 
+        for sala in self.sale:
+            if sala.posti_disponibili() >= num_posti:
+                print(f"{titolo_film.titolo}, sala numero: {sala.num_ident}, {num_posti} posti.")
+            else:
+                print(f"Per il film: {titolo_film.titolo} non ci sono posti disponibili.")
 
 
-
-
-
-
+the_avengers: Film = Film('The Avengers', '2:33')
+sala1: Sala = Sala(2, 5, 43, film_adesso=the_avengers)
+cinema1: Cinema = Cinema([])
+cinema1.aggiungi_sala(sala1)
+cinema1.prenota_film(the_avengers, 3)
