@@ -153,7 +153,7 @@ smi = Building(name='SMI', address='Via Sierra Nevada 60', num_floors=5)
 
 
 smi.add_room(Rooms(id='666', floor=3, seats=32))
-smi.add_room(Rooms(id='333')
+smi.add_room(Rooms(id='333'))
 
 
 
