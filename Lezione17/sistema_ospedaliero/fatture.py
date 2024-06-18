@@ -21,6 +21,7 @@ class Fattura:
 
             print('Non è possibile creare la classe fattura poichè il dottore non è valido!')
             
+            
 
         
 
