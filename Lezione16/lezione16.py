@@ -58,9 +58,3 @@ class Media:
               f'Giudizio: {self.getRate()}\n'
               f'Percentuale: {self.ratePercentage}')
              
-
-
-
-
-
-    class Film:

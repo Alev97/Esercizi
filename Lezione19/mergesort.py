@@ -90,6 +90,8 @@ if __name__ == "__main__":
     plt.yscale("log")
     plt.legend()
     plt.show()
+
+
 # class Esempio:
     
 #     def __init__(self, name) -> None:

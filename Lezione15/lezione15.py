@@ -30,16 +30,19 @@ with FileManager(file_name = 'prova.txt', mode = 'w') as file:
 # Esercizio 2
 
 
+import time
+
+
 class Timer:
 
     def __enter__(self):
-        import time
+     
 
         self.time = time.time()
 
     
     def __exit__(self, exc_type, exc_value, traceback):
-        import time
+        
 
         print(f"Time Elapsed: {time.time() - self.time}")
 
