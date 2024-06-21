@@ -97,9 +97,17 @@ class PagamentoContanti(Pagamento):
 
     def inPezziDa(self):
 
+        resto = self._importo
         soldi: list[float] = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.20, 0.10, 0.05, 0.01]
 
-        
+        for x in soldi:
+            quantità = resto / soldi
+
+            if quantità > 0:
+                
+
+    
+
 
 
 
