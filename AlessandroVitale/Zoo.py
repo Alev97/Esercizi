@@ -92,5 +92,22 @@ class Zoo:
                     print("#" * 30)
 
         
+zookeeper1 = ZooKeeper(name='Franco', surname='marini', id='KDR2378')
+zookeeper2 = ZooKeeper(name='Ugo', surname='Fantozzi', id='YHQ2051')
 
+fence1 = Fence(area=200.0, temperature=22.0, habitat='Foresta')
+fence2 = Fence(area=150.0, temperature=40.0, habitat='Deserto')
+
+animal1 = Animal(name='Lince', species='Linux', age=7, height=2.0, width=1.0, preferred_habitat='Foresta')
+animal2 = Animal(name='Cammello', species='Cammelus', age=10, height=3.0, width=1.7, preferred_habitat='Deserto')
+
+zoo = Zoo(fences=[fence1, fence2], zookeepers=[zookeeper1, zookeeper2])
+
+zookeeper1.add_animal(animal1, fence1)
+zookeeper2.add_animal(animal2, fence2)
+"""
+zookeeper1.remove_animal(animal1, fence1)
+zookeeper2.remove_animal(animal2, fence2)
+"""
+zoo.describe_zoo()
 
